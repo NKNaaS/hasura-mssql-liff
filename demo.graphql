@@ -1,0 +1,38 @@
+mutation AdminAddUser {
+  insert_user_one(
+    object: { id: "U3df46917817701db5f34c533f3fc14d3", name: "Nakano as a Service" }
+  ) {
+    id
+    name
+  }
+}
+
+query GetMe {
+  user {
+    id
+    name
+    deleted_at
+  }
+}
+
+mutation AdminDelUserLogically {
+  update_user_by_pk(
+    pk_columns: { id: "U3df46917817701db5f34c533f3fc14d3" }
+    _set: { deleted_at: "2023-06-02T18:02:28.665Z" }
+  ) {
+    id
+    name
+    deleted_at
+  }
+}
+
+mutation AdminRestoreUser {
+  update_user_by_pk(
+    pk_columns: { id: "U3df46917817701db5f34c533f3fc14d3" }
+    _set: { deleted_at: null }
+  ) {
+    id
+    name
+    deleted_at
+  }
+}

@@ -1,0 +1,16 @@
+table:
+  name: user
+  schema: dbo
+select_permissions:
+  - role: user
+    permission:
+      columns:
+        - id
+        - name
+        - deleted_at
+      filter:
+        _and:
+          - id:
+              _eq: x-hasura-user-id
+          - deleted_at:
+              _is_null: true

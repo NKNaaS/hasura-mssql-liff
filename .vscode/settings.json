@@ -1,0 +1,25 @@
+{
+  "cSpell.words": [
+    "codegen",
+    "hasura",
+    "liff",
+    "nakano",
+    "todos",
+    "urql"
+  ],
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[typescript]": {
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
+    }
+  },
+  "[typescriptreact]": {
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
+    }
+  },
+  "extensions.ignoreRecommendations": false,
+  "npm.packageManager": "pnpm",
+}
